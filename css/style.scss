@@ -11,6 +11,30 @@ body{
   background-color: #1A1A1A;
 }
 
+@import 'partials/colors';
+
 .logo{
   width: 8rem;
 }
+
+// Configurando imagens e svgs que irão aparecer ao longo do arquivo como fluids
+// sejam elementos de bloco
+img, svg{
+  display: block;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: $white;
+}
+
+//Aplicar essa classe em toda e qualquer div para facilitar quando quiser
+// visualiza
+.border{
+  border: 1px solid red;
+}
+
+@import 'partials/layout';
+@import 'partials/menu';
+@import 'partials/animations';

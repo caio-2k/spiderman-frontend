@@ -1,0 +1,97 @@
+header{
+  width: 100%;
+  padding-top: 16px;
+}
+
+.navbar{
+  max-width: 1440px;
+  //0px em cima e em baixo, auto de um lado e de outro
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+
+  //Recurso do SASS
+  li{
+    margin-left: 24px;
+  }
+}
+
+.nav-link{
+  display: inline-block;
+  padding: 8px 16px;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: $gray-3;
+  position: relative;
+
+  //Quando defino um elemento after coloco vazio pois nao quero nenhum elemento
+  //lá (filho do nav link).
+  &::after{
+    content: '';
+        display: block;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+
+        margin-top: 8px;
+        width: 3px;
+        height: 0px;
+        border-radius: 3px;
+
+        transform: translate3d(-15%,0,0);
+        transition: .7s ease;
+
+        background: linear-gradient(359.94deg, #E11C21 0.06%, rgba(225, 28, 33, 0) 101.91%);
+  }
+
+  &:hover{
+    color: $white-light;
+
+    &::after{
+        height: 40px;
+    }
+
+}
+
+}
+
+.nav-social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  svg{
+      margin-left: 16px;
+      width: 24px;
+
+      cursor: pointer;
+
+      path, circle{
+          transition: .7s ease;
+      }
+
+      &:hover{
+          path, circle{
+              fill: $red-light;
+              transform: translate3d(0, -2px, 0);
+          }
+      }
+  }
+}

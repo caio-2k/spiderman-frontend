@@ -1,13 +1,24 @@
-//Container principal (wireframe hero)
+//Função do SASS colocar funções dentro do mixin
+@mixin responsive(){
+  //Quando atingir 960px de argura vai começar a ler o conteudo passado
+  @media screen and (max-width: 960px) {
+    
+  }
+}
 
+//Container principal (wireframe hero)
 .container {
   max-width: 1440px;
   margin: 0 auto;
 
+
   padding: 36px 16px;
 
+
+  height: 85vh;
+
   //Tira todo e qualquer sobra.
-  overflow: hidden;
+  // overflow: hidden;
 
   //um ao lado do outro
   display: flex;
@@ -26,8 +37,18 @@
 .container-item-2 {
 }
 
-.buttons-ref{
-  margin-top: 10px;
+//Aplicar display flex
+.flex{
+  display: flex;
+}
+
+.align-center{
+  align-items: center;
+}
+
+//Forçar que o elemento da div esteja do tamanho auto do SVG
+.w-auto{
+  width: auto;
 }
 
 .spiderman {

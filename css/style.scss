@@ -6,6 +6,16 @@
   font-family: 'Mukta', sans-serif;
 }
 
+//Função do SASS colocar funções dentro do mixin
+@mixin responsive(){
+  //Quando atingir 960px de largura vai começar a ler o conteudo passado
+  @media screen and (max-width: 960px) {
+    //Quando eu chamar a função e colocar o conteúdo dentro dela ele vai 
+    //passar o conteúdo dentro dela para o media screen
+    @content;
+  }
+}
+
 @import 'partials/colors';
 
 body{

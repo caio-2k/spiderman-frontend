@@ -1,0 +1,26 @@
+.logo-spiderman{
+  fill: transparent;
+  animation: logo-spiderman 12s ease infinite alternate;
+}
+
+@keyframes logo-spiderman{
+  //no inicio
+  0%{
+    //não apareça borda
+    stroke-width: 0;
+    //tamanho de borda
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25%{
+    stroke-width: 1;
+    //tamanho de borda (efeito de draw)
+    stroke-dasharray: 100 0;
+    fill: transparent;
+  }
+  //de 60 ate 100, stroke volte pra 0 e o fill vá pro branco
+  60%,100%{
+    stroke-width: 0.3;
+    fill: $white-dark;
+  }
+}
